@@ -70,7 +70,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.only('PUSH', () => {
+  describe('PUSH', () => {
     it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
@@ -118,41 +118,41 @@ describe('LINKED LIST', () => {
   });
 
   describe('POP', () => {
-    it.skip('should return null if nothing in list', () => {
+    it('should return null if nothing in list', () => {
       expect(list.length).to.eq(0);
       expect(list.pop()).to.eq(null);
     });
 
-    it.skip('should not decrement the length if there are no nodes', () => {
-      list.pop()
+    it('should not decrement the length if there are no nodes', () => {
+      list.pop();
       expect(list.length).to.eq(0);
     });
 
-    it.skip('should change the length', () => {
+    it('should change the length', () => {
       list.push('duck');
 
-      expect(list.length).to.eq(1)
+      expect(list.length).to.eq(1);
 
       let result = list.pop();
 
       expect(list.length).to.eq(0);
     });
 
-    it.skip('should set the list head to null', () => {
+    it('should set the list head to null', () => {
       list.push('duck');
       let result = list.pop();
 
       expect(list.head).to.eq(null);
     });
 
-    it.skip('should return the last element', () => {
+    it('should return the last element', () => {
       list.push('duck');
       const result = list.pop();
 
       expect(result.data).to.eq('duck');
     });
 
-    it.skip('should return the last element from the list', () => {
+    it('should return the last element from the list', () => {
       list.push("duck");
       list.push("goose");
       list.push("swan");
@@ -162,7 +162,7 @@ describe('LINKED LIST', () => {
       expect(output.data).to.eq('southern screamer');
     });
 
-    it.skip('should remove the last element from the list', () => {
+    it('should remove the last element from the list', () => {
         list.push("duck");
         list.push("goose");
         list.push("swan");
