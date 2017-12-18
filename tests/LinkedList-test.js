@@ -29,14 +29,14 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.only('SHIFT', () => {
-    it.skip('should return null if nothing in the list', () => {
+  describe('SHIFT', () => {
+    it('should return null if nothing in the list', () => {
       let result = list.shift();
 
       expect(result).to.equal(null);
     });
 
-    it.skip('should return the first item in the list', () => {
+    it('should return the first item in the list', () => {
       list.unshift('duck');
 
       expect(list.head.data).to.equal('duck');
@@ -46,7 +46,7 @@ describe('LINKED LIST', () => {
       expect(result.data).to.equal('duck');
     });
 
-    it.skip('should remove items from the front of list / head', () => {
+    it('should remove items from the front of list / head', () => {
 
       list.unshift('duck');
       list.unshift('goose');
@@ -70,7 +70,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('PUSH', () => {
+  describe.only('PUSH', () => {
     it.skip('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
