@@ -300,7 +300,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.only('TO ARRAY', () => {
+  describe('TO ARRAY', () => {
     
     it('converts to an array', () => {
       expect(list.toArray()).to.deep.equal([]);
@@ -390,7 +390,7 @@ describe('LINKED LIST', () => {
       list.push("tomorrow")
     });
 
-    it.skip('should calculate distance between nodes', () => {
+    it('should calculate distance between nodes', () => {
       expect(list.distance("hello", "today")).to.eq(3);
       expect(list.distance("pizza", "today")).to.eq(2);
       expect(list.distance("hello", "world")).to.eq(2);
