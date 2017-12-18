@@ -112,4 +112,16 @@ export default class LinkedList {
     }
   }
 
+  toArray() {
+    let arr = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      arr.push(currentNode.data);
+      currentNode = currentNode.next;
+    }
+
+    return arr;
+  }
+
 }

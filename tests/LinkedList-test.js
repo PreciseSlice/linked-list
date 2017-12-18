@@ -242,7 +242,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.only('DELETE', () => {
+  describe('DELETE', () => {
     
     it('deletes a solo node', () => {
       list.push('hello');
@@ -300,9 +300,9 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('TO ARRAY', () => {
+  describe.only('TO ARRAY', () => {
     
-    it.skip('converts to an array', () => {
+    it('converts to an array', () => {
       expect(list.toArray()).to.deep.equal([]);
     });
 
@@ -314,7 +314,7 @@ describe('LINKED LIST', () => {
         list.push('Spain');
       });
 
-      it.skip('can convert to an array', () => {
+      it('can convert to an array', () => {
         expect(list.toArray()).to.deep.equal(['The', 'rain', 'in', 'Spain']);
       });
     });
