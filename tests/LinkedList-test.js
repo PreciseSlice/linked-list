@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import Node from '../scripts/Node'
-import LinkedList from '../scripts/LinkedList'
+import Node from '../scripts/Node';
+import LinkedList from '../scripts/LinkedList';
 
 describe('LINKED LIST', () => {
   let list;
@@ -8,34 +8,33 @@ describe('LINKED LIST', () => {
   beforeEach(() => {
     list = new LinkedList();
   });
-
+  
   it('should start with zero elements', () => {
     expect(list.length).to.eq(0);
   });
-
+  
   it('should set its default head to null', () => {
     expect(list.head).to.eq(null);
   });
-
+  
   describe('UNSHIFT', () => {
-    it.skip('should add items to front of list / head', () => {
+    it('should add items to front of list / head', () => {
       list.unshift('duck');
-      expect(list.length).to.equal(1)
-      expect(list.head.data).to.equal('duck')
-
+      expect(list.length).to.equal(1);
+      expect(list.head.data).to.equal('duck');
       list.unshift('goose');
-      expect(list.length).to.equal(2)
-      expect(list.head.data).to.equal('goose')
-      expect(list.head.next.data).to.equal('duck')
-    })
-  })
+      expect(list.length).to.equal(2);
+      expect(list.head.data).to.equal('goose');
+      expect(list.head.next.data).to.equal('duck');
+    });
+  });
 
-  describe('SHIFT', () => {
+  describe.only('SHIFT', () => {
     it.skip('should return null if nothing in the list', () => {
       let result = list.shift();
 
-      expect(result).to.equal(null)
-    })
+      expect(result).to.equal(null);
+    });
 
     it.skip('should return the first item in the list', () => {
       list.unshift('duck');
@@ -45,7 +44,7 @@ describe('LINKED LIST', () => {
       let result = list.shift();
 
       expect(result.data).to.equal('duck');
-    })
+    });
 
     it.skip('should remove items from the front of list / head', () => {
 
@@ -55,21 +54,21 @@ describe('LINKED LIST', () => {
       expect(list.head.next.data).to.equal('duck');
 
       // remove goose from list
-      result = list.shift();
-      expect(result.data).to.equal('goose')
+      let result = list.shift();
+      expect(result.data).to.equal('goose');
 
       // duck should now be back at the start of the list
-      expect(list.head.data).to.equal('duck')
+      expect(list.head.data).to.equal('duck');
 
       // remove duck from list
       result = list.shift();
 
-      expect(result.data).to.equal('duck')
+      expect(result.data).to.equal('duck');
 
       // no more items in our list
-      expect(list.head).to.equal(null)
-    })
-  })
+      expect(list.head).to.equal(null);
+    });
+  });
 
   describe('PUSH', () => {
     it.skip('should push a single element to a list', () => {
