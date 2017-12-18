@@ -71,24 +71,24 @@ describe('LINKED LIST', () => {
   });
 
   describe.only('PUSH', () => {
-    it.skip('should push a single element to a list', () => {
+    it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
     });
 
-    it.skip('should increment the length of the list', () => {
+    it('should increment the length of the list', () => {
       list.push('duck');
       expect(list.length).to.eq(1);
     });
 
-    it.skip('should increment the length count', () => {
+    it('should increment the length count', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
       expect(list.length).to.eq(3);
     });
 
-    it.skip('should assign the head to the first element pushed', () => {
+    it('should assign the head to the first element pushed', () => {
       expect(list.head).to.eq(null);
 
       list.push('duck');
@@ -98,14 +98,14 @@ describe('LINKED LIST', () => {
       expect(list.head.data).to.eq('duck');
     });
 
-    it.skip('should attach the second element to the first element', () => {
+    it('should attach the second element to the first element', () => {
       list.push('duck');
       list.push('swan');
       expect(list.head.data).to.eq('duck');
       expect(list.head.next.data).to.eq('swan');
     });
 
-    it.skip('should attach nexts in sequential order', () => {
+    it('should attach nexts in sequential order', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
@@ -287,7 +287,7 @@ describe('LINKED LIST', () => {
 
         list.delete('my')
 
-        expect(list.head.next.data).to.eq('old')
+        expect(list.head.next.data).to.eq('old');
       });
 
       it.skip('resets the list.head if deleting the first node', () => {
@@ -296,7 +296,7 @@ describe('LINKED LIST', () => {
         expect(list.head.data).to.eq('darkness');
       });
 
-    })
+    });
   });
 
   describe('TO ARRAY', () => {
