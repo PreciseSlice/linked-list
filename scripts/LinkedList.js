@@ -124,4 +124,24 @@ export default class LinkedList {
     return arr;
   }
 
+  distance(first, second) {
+    let currentNode = this.head;
+    let count = 0;
+    
+    while(currentNode) {
+      
+      if (currentNode.data === first) {
+        count = 0;
+      }
+      
+      if (currentNode.data === second) {
+        return count;
+      }
+      
+      count ++;
+      currentNode = currentNode.next;
+
+    }
+  }
+
 }
