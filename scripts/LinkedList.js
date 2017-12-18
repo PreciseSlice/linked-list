@@ -15,4 +15,14 @@ export default class LinkedList {
     this.length++;
   }
 
+  shift() {
+    let oldHead = this.head;
+   
+    if (this.length) {
+      this.head = this.head.next;
+      this.length--;
+    }
+    return oldHead;
+  }
+
 }
