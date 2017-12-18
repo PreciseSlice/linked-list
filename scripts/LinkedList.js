@@ -12,7 +12,7 @@ export default class LinkedList {
     
     newNode.next = currentHead;
     this.head = newNode;
-    this.length++;
+    this.length ++;
   }
 
   shift() {
@@ -58,9 +58,7 @@ export default class LinkedList {
       while(currentNode.next !== null) {
         prevNode = currentNode;
         currentNode = currentNode.next;
-    }
-
-    
+      }
 
     if(prevNode) {
       prevNode.next = null;
@@ -69,6 +67,48 @@ export default class LinkedList {
     this.length --;
 
     return currentNode;
+    }
+  }
+
+  find(data) {
+    let foundNode = null;
+    let currentNode = this.head;
+
+    while (currentNode) {
+      
+      if (currentNode.data === data) {
+        foundNode = currentNode;
+        return foundNode;
+      } else {
+        currentNode = currentNode.next;
+      } 
+    }
+
+    return foundNode;
+  }
+
+  delete (data) {
+    
+    if (this.head.data === data) {
+      this.length --;
+      this.head = this.head.next;
+    }
+
+    let currentNode = this.head;
+    let previousNode = null;
+
+    while (currentNode) {
+
+      if (currentNode.data === data) {
+        previousNode.next = currentNode.next;
+        this.length --;
+        break;
+      
+      } else {
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+
     }
   }
 
