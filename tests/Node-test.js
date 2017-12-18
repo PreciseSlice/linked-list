@@ -20,4 +20,4 @@ describe('NODE', () => {
     expect(node.data).to.equal('pizza');
   });
 
-})
+});
