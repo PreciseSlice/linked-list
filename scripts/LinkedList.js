@@ -42,4 +42,34 @@ export default class LinkedList {
   this.length++;
   }
 
+  pop(data) {
+
+    if(!this.length) {
+      return null;
+    } else {
+      let currentNode = this.head;
+      let prevNode;
+
+      if(this.length === 1){
+        this.head = null;
+      }
+
+      // find last node
+      while(currentNode.next !== null) {
+        prevNode = currentNode;
+        currentNode = currentNode.next;
+    }
+
+    
+
+    if(prevNode) {
+      prevNode.next = null;
+    }
+    
+    this.length --;
+
+    return currentNode;
+    }
+  }
+
 }
